@@ -18,13 +18,8 @@ services:
       - DB_USER=postgres
       - DB_PASS=supersecretpassword
       - SECRET_KEY=supersecretkey
-#      - DB_PASSWORD=db_password
-#      - SECRET_KEY=django_key
     depends_on:
       - db
-#    secrets:
-#      - db_password
-#      - django_key
 
   db:
     image: postgres:10-alpine
@@ -32,9 +27,3 @@ services:
       - POSTGRES_DB=app
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=supersecretpassword
-#
-#secrets:
-#  db_password:
-#    external: true
-#  django_key:
-#    external: true
